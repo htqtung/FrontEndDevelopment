@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Form</title>
+    <style>
+      input {
+        width: 95%;
+        padding: 4px;
+        margin: 10px;
+      }
+      select {
+        width: 95%;
+        padding: 4px;
+        margin: 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Form</h1>
+    <form>
+      First Name <input type="text" name="fname">
+      Last Name <input type="text" name="lname">
+      Date of Birth <input type="text" name="dob">
+      Gender <select> <option value="male">male</option> <option value="female">female</option> </select>
+      Email <input type="text" name="email">
+      Homepage <input type="text" name="homepage">
+      Favorite Color <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ff0000" style="width:95%;">
+      <input type="submit" value="Save">
+    </form>
+
+  </body>
+</html>
