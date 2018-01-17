@@ -1,0 +1,38 @@
+body {
+  background-image: url('gaming-pattern.png');
+}
+
+img {
+  width: 95%;
+}
+
+h1, h2, h3, h4 {
+  color: #16bc77;
+}
+
+li a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
+li a:hover {
+  background-color: #50f4b0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+article {
+  margin-left: 50px;
+}
+
+article p, img {
+  margin-left: 50px;
+}
+
+footer {
+  margin-top: 50px;
+}
