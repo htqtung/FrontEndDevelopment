@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Table</title>
+    <style>
+      .flexboxes-container div {
+        border: 1px solid #c4bebe;
+        text-align: center;
+        margin: 20px;
+      }
+      .flexboxes-container {
+        display: flex;
+        align-items: center;
+      }
+      @media screen and (max-width: 600px) {
+        .flexboxes-container {
+          flex-direction: column;
+        }
+      }
+      @media screen and (min-width: 601px) {
+        .flexboxes-container {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Using Flexbox</h1>
+    <div class="flexboxes-container">
+      <div><p>This is the first section</p></div>
+      <div><p>Here is some more text.</p></div>
+      <div><p>Text continues in this section.</p></div>
+      <div><p>Is there more coming?</p></div>
+      <div><p>This is the final section</p></div>
+    </div>
+  </body>
+</html>
