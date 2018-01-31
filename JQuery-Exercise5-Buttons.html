@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Using jquery</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+            crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <p id="Chap1">
+                <b>Chapter 1.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis pharetra urna. Integer eu enim ex. Nullam eu dolor at
+                mauris lacinia dapibus. Proin sit amet mi tempor, mollis est vitae, dapibus urna. Donec efficitur felis urna, nec porttitor
+                ex posuere et. Praesent pulvinar posuere lectus, et bibendum purus. Nulla facilisi. Curabitur euismod, libero a vehicula
+                molestie, mi ante pharetra velit, vel congue turpis tellus in sapien. Duis at tortor mollis, dignissim lacus vel, ultricies
+                diam.
+            </p>
+            <p id="Chap2">
+                <b>Chapter 2.</b> Morbi velit tellus, imperdiet sed mauris in, pellentesque auctor urna. Pellentesque tempor ultrices maximus. Sed vestibulum
+                eget sem in venenatis. Integer efficitur purus sed varius fringilla. Phasellus et erat justo. In rutrum, dui id dictum iaculis,
+                sem magna viverra quam, nec accumsan nisl ipsum dapibus ante. Ut vel bibendum nulla. Fusce gravida elementum fringilla.
+            </p>
+            <button type="button" class="btn btn-secondary" id="toggleButton">Toggle Chapter 1</button>
+            <button type="button" class="btn btn-secondary" id="fadeButton">Fade out both</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                // Insert your code here
+                $("#toggleButton").click(function() {
+                    $("#Chap1").toggle();
+                });
+                $("#fadeButton").click(function () {
+                    $("p").fadeOut();
+                });
+            });
+        </script>
+    </body>
+
+</html>

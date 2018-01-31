@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Using jquery</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+            crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <h1>My Calculator</h1>
+            <p id="result">Result = </p>
+            <form>
+                <div class="row">
+                    <div class="col form-group">
+                        <input type="text" class="form-control" id="inputNumber1">
+                    </div>
+                    <div class="col form-group">
+                        <input type="text" class="form-control" id="inputNumber2">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <button type="button" class="col-1 btn btn-outline-dark" id="plusButton">+</button>
+                    <button type="button" class="col-1 offset-1 btn btn-outline-dark" id="minusButton">-</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                // Insert your code here
+                $("#plusButton").click(function() {
+                    var result = Number($("#inputNumber1").val()) + Number($("#inputNumber2").val());
+                    $("#result").text("Result = " + result);
+                });
+                $("#minusButton").click(function () {
+                    var result = Number($("#inputNumber1").val()) - Number($("#inputNumber2").val());
+                    $("#result").text("Result = " + result);
+                });
+            });
+        </script>
+    </body>
+
+</html>
