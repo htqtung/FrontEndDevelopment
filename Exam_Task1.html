@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React getting started</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+    <!-- Root container for react components -->
+    <div id='root'></div>
+    </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+      // Your scripts goes here
+      class ChuckNorrisJoke extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {joke: '', iconurl: ''};
+        }
+        componentDidMount() {
+          this.getJoke();
+        }
+        getJoke = () => {
+          fetch('https://api.chucknorris.io/jokes/random')
+          .then((response) => response.json())
+          .then((responseData) => {
+             console.log(responseData);
+              this.setState({
+                joke: responseData.value,
+                iconurl: responseData.icon_url,
+              });
+          });
+        }
+        render() {
+          return (
+            <div class="card">
+              <div class="card-image card-header">
+                <img src={this.state.iconurl} />
+              </div>
+              <div class="card-body">
+                <div class="card-text"> {this.state.joke} </div>
+              </div>
+              <button onClick={this.getJoke} class="btn btn-light">New Joke</button>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<ChuckNorrisJoke />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
